@@ -5,6 +5,7 @@ const Navbar = () => {
     <div className="flex flex-col gap-2 md:flex-row">
       <Link to='/'>Home</Link>
       <Link to='/about'>About</Link>
+      <Link to='/readList'>ReadList</Link>
     </div>
   );
   return (
