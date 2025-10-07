@@ -1,4 +1,5 @@
 import { useLoaderData, useParams } from "react-router";
+import { ToastContainer, toast } from 'react-toastify';
 import { addToStoreDB } from "../../Utility/addToDB";
 
 const BookDetails = () => {
@@ -21,9 +22,11 @@ const BookDetails = () => {
 
   const handleMarkAsRead = (id) => {
     addToStoreDB(id);
+    toast("Book is read!");
   }
 
   return (
+    
     <div className="md:flex items-center gap-12 m-3">
       <div className="p-[73px] bg-gray-200 rounded-2xl flex-1">
         <img src={image} alt="" />
@@ -71,6 +74,7 @@ const BookDetails = () => {
         <button class="btn btn-info m-3">Add to WishList</button>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };
