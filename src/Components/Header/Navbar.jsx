@@ -1,8 +1,10 @@
+import { Link } from "react-router";
+
 const Navbar = () => {
   const lists = (
     <div className="flex flex-col gap-2 md:flex-row">
-      <li>Home</li>
-      <li>About</li>
+      <Link to='/'>Home</Link>
+      <Link to='/about'>About</Link>
     </div>
   );
   return (
